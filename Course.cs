@@ -57,8 +57,8 @@ public class Course {
         return "Course Code: " + Code + "\n" +
             "Category: " + Category + "\n" +
             "Name: " + Name + "\n" +
-            "Instructor: " + Instructor.GetName();
-            this.CheckCapacity() + "\n" +
+            "Instructor: " + Instructor.GetName() + "\n" +
+            CheckCapacity() + "\n" +
             "------------------------------------\n" +
             "Students\n" + BasicRoster(); 
     }

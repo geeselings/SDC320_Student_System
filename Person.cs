@@ -23,7 +23,7 @@ public abstract class Person {
     }
 
     public override string ToString() {
-        return "Name: " + FirstName + LastName + "\n" +
+        return "Name: " + GetName() + "\n" +
             "   Phone: " + Phone + "\n" +
             "   Email: " + Email + "\n";
     }

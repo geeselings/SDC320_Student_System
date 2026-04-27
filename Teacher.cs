@@ -13,12 +13,8 @@ public class Teacher : Person {
             Honorific = honor;
         }
 
-    public override string GetName() {
-        return Honorific + " " + base.GetName();
-    }
-
     public override string ToString() {
         return base.ToString() +
-            "   Honorific: " + Honorific + "/n";
+            "   Honorific: " + Honorific + "\n";
     }
 }
