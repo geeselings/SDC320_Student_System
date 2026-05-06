@@ -6,19 +6,19 @@ Assignment: Course Project
 ************/
 
 public class Course {
-    private string Code { get; set; }
-    private string Category { get; set; }
-    private string Name {get; set; }
-    private int MaxCapacity { get; set; }
-    private Teacher Instructor { get; set; }
-    private List<Student> Students { get; }
+    public string Code { get; set; }
+    public string Category { get; set; }
+    public string Name {get; set; }
+    public int MaxCapacity { get; set; }
+    public int InstructorID { get; set; }
+    public List<Student> Students { get; }
 
-    public Course(string code, string category, string name, int max, Teacher teacher) {
+    public Course(string code, string category, string name, int max, int teacher) {
         Code = code;
         Category = category;
         Name = name;
         MaxCapacity = max;
-        Instructor = teacher;
+        InstructorID = teacher;
         Students = new List<Student>();
     }
 
@@ -53,7 +53,17 @@ public class Course {
         return res;
     }
 
-    public override string ToString() {
+    public string CourseInfo(string name) {
+        return "Course Code: " + Code + "\n" +
+            "Category: " + Category + "\n" +
+            "Name: " + Name + "\n" +
+            "Instructor: " + name + "\n" +
+            CheckCapacity() + "\n" +
+            "------------------------------------\n" +
+            "Students\n" + BasicRoster();
+    }
+
+    /*public override string ToString() {
         return "Course Code: " + Code + "\n" +
             "Category: " + Category + "\n" +
             "Name: " + Name + "\n" +
@@ -61,7 +71,7 @@ public class Course {
             CheckCapacity() + "\n" +
             "------------------------------------\n" +
             "Students\n" + BasicRoster(); 
-    }
+    }*/
 
     public void AddStudent(Student s) {
         Students.Add(s);

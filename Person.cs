@@ -6,10 +6,19 @@ Assignment: Course Project
 ************/
 
 public abstract class Person {
-    private string FirstName { get; set; }
-    private string LastName { get; set; }
-    private string Phone { get; set; }
-    private string Email { get; set; }
+    public int ID { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Phone { get; set; }
+    public string Email { get; set; }
+
+    public Person(int id, string first, string last, string phone, string email) {
+        ID = id;
+        FirstName = first;
+        LastName = last;
+        Phone = phone;
+        Email = email;
+    }
 
     public Person(string first, string last, string phone, string email) {
         FirstName = first;
