@@ -44,6 +44,13 @@ public class StudentDB {
         cmd.ExecuteNonQuery();
     }
 
+    public static void DeleteStudent(SQLiteConnection conn, int id) {
+        string sql = string.Format("DELETE from Students WHERE ID = {0}", id);
+        SQLiteCommand cmd = conn.CreateCommand();
+        cmd.CommandText = sql;
+        cmd.ExecuteNonQuery();
+    }
+
     public static List<Student> GetAllStudents(SQLiteConnection conn) {
         List<Student> students = new List<Student>();
         string sql = "SELECT * FROM Students";
