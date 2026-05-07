@@ -26,3 +26,5 @@ This project is program meant to mimic a school database system. It allows for t
 - **SQL:** Used for handling database
 
 ## Link to project: 
+[Youtube : Project Preview](https://youtu.be/zsfekQdi5vo)
+[Github : Project Files](https://github.com/geeselings/Student_System)
